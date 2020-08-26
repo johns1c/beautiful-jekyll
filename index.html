@@ -1,5 +1,60 @@
 ---
-layout: home
-title: Competition in Paddlesport
-subtitle: A kyacking club in the Lee Valley
+layout: page
+title: "COPS - Competition in Paddlesport"
+subtitle: A paddle club in the Lea Valley
+css: "/css/index.css"
+meta-title: "COPS - Competition in Paddlesport"
+meta-description: "A family orientated competative paddle club in the Lea Valley"
+support_promo_box: true
+bigimg:
+  - "/assets/img/20190714-434aa_orig.jpg" : "Two of our paddlers enjoy a rivals demise (July 2019 copyright Angela Aldam)"
+  - "/assets/img/20191215-947aa_orig.jpg" : "Competitors at the start of our Winter Regatta (December 2019 copyright Angela Aldam"
 ---
+
+<div class="list-filters">
+  <a href="/news" class="list-filter">News</a>
+  <a href="/" class="list-filter filter-selected">All posts</a>
+  <a href="/tutorials" class="list-filter">Tutorials</a>
+  <a href="/tags" class="list-filter">Index</a>
+</div>
+
+{% include support_promo_box.html %}
+
+<div class="posts-list">
+  {% for post in paginator.posts %}
+  <article>
+    <a class="post-preview" href="{{ post.url | prepend: site.baseurl }}">
+	    <h2 class="post-title">{{ post.title }}</h2>
+	
+	    {% if post.subtitle %}
+	    <h3 class="post-subtitle">
+	      {{ post.subtitle }}
+	    </h3>
+	    {% endif %}
+      <p class="post-meta">
+        Posted on {{ post.date | date: "%B %-d, %Y" }}
+      </p>
+
+      <div class="post-entry">
+        {{ post.content | truncatewords: 50 | strip_html | xml_escape}}
+        <span href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</span>
+      </div>
+    </a>  
+   </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager main-pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
