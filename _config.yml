@@ -1,4 +1,5 @@
-# --- Required options --- #
+# --- Required options ---
+ #
 
 # Name of website
 title: COPS website
@@ -9,17 +10,22 @@ author: the committee
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutus"
+  About Us: "aboutus"
+  Sessions :
+    - Calendar : "calendar"
+    - Book Sessions and Kit : "reserve" 
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - Committee Meetings and Agenda: "committee"
+    - Policies and Procedures: "policies"
+    - Links: "links" 
+  Join us: "join" 
+
 
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/kyack_icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: false
@@ -214,7 +220,6 @@ plugins:
   - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
 
 
 theme: jekyll-theme-minimal
