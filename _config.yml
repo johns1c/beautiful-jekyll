@@ -2,7 +2,7 @@
  #
 
 # Name of website
-title: COPS website
+title: COPS
 
 # Your name to show in the footer
 author: the committee
@@ -11,9 +11,9 @@ author: the committee
 
 navbar-links:
   About Us: "aboutus"
-  Sessions :
-    - Calendar : "calendar"
-    - Book Sessions and Kit : "reserve" 
+  Sessions:
+    - Calendar: "calendar"
+    - Book Sessions and Kit: "booking" 
   Resources:
     - Committee Meetings and Agenda: "committee"
     - Policies and Procedures: "policies"
